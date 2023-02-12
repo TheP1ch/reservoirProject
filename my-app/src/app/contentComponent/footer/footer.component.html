@@ -1,0 +1,42 @@
+<div class="buttons_block">
+  <button class="btn download-reservoir" (click)="uploadData()">
+    Загрузить данные
+  </button>
+  <button class="btn change-borders" (click)="changeBounds()">
+    Поменять границы резервуара
+  </button>
+  <div class="input_block">
+    <input
+      class="input-left-border"
+      type="text"
+      [value]="leftBound"
+      min="0"
+      max="1000"
+      #leftInput
+    />
+    <input
+      class="input-right-border"
+      type="text"
+      [value]="rightBound"
+      min="0"
+      max="1000"
+      #rightInput
+    />
+  </div>
+</div>
+<div class="footer-wrapper">
+  <div class="green-card-information">
+    <p>
+      <span class="left-border">{{ leftBound }}</span> &lt; МАССА &lt;
+      <span class="right-border">{{ rightBound }}</span>
+    </p>
+  </div>
+  <div class="red-card-information">
+    <p>
+      МАССА &lt; <span class="left-border">{{ leftBound }}</span>
+    </p>
+    <p>
+      МАССА &gt; <span class="right-border">{{ rightBound }}</span>
+    </p>
+  </div>
+</div>

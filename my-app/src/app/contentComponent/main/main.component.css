@@ -1,0 +1,18 @@
+:host {
+  padding: 3.9% 2.95% 7.9%;
+  flex: 1 0 auto;
+}
+
+.card_list {
+  width: 100%;
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(auto-fill, minmax(198px, auto));
+  gap: 80px;
+}
+
+@media screen and (max-width: 565px) {
+  .card_list {
+    justify-items: center;
+  }
+}
